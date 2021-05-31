@@ -1,0 +1,20 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:dutu-dhn/springcloud-config.git
+          search-paths:
+            - springcloud-config
+          username: 793665938@qq.com
+          password: dhn15896715671
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
